@@ -1,21 +1,23 @@
 import tkinter as tk
 
 class Janela:
-    def __init__(self):
+    def __init__(self,geometria,titulo):
         self.janela = tk.Tk()
-        self.janela.title('Janela')
-        self.janela.geometry('300x300')
-        self.widgets = []
+        self.janela.title(titulo)
+        self.janela.geometry(geometria)
 
-    def adicionar_botao(self, texto, comando):
+    def label(self, texto, x, y,tamanho):
+        fonte = ("Fonte/NerkoOne-Regular.ttf",tamanho)
+        label = tk.Label(self.janela, text=texto, font=fonte)
+        label.place(x=x, y=y)
+
+    def botao(self, texto, x, y, comando):
         botao = tk.Button(self.janela, text=texto, command=comando)
-        botao.pack()
-        self.widgets.append(botao)
-
-    def adicionar_label(self, texto):
-        label = tk.Label(self.janela, text=texto)
-        label.pack()
-        self.widgets.append(label)
+        botao.place(x=x, y=y)
+    
+    def botao_config(self, texto, x, y, comando, cor):
+        botao = tk.Button(self.janela, text=texto, command=comando, bg=cor)
+        botao.place(x=x, y=y)
 
     def fechar(self):
         self.janela.destroy()

@@ -1,0 +1,16 @@
+{
+    "Dependencias": {
+        "Versao": "0.1",
+        "Bibilhotecas": {
+            "Biblioteca1": {
+                "Nome": "Pygame"
+            }
+        },
+        "instaldo": true,
+        "instalacao": {
+            "Biblioteca1": {
+                "Comando": "pip install pygame"
+            }
+        }
+    }
+}
