@@ -3,14 +3,24 @@
         "Versao": "0.1",
         "Bibilhotecas": {
             "Biblioteca1": {
-                "Nome": "Pygame"
+                "Nome": "Pygame",
+                "instaldo": true
+            },
+            "Biblioteca2": {
+                "Nome": "requests",
+                "instaldo": false
             }
         },
-        "instaldo": true,
         "instalacao": {
             "Biblioteca1": {
                 "Comando": "pip install pygame"
+            },
+            "Biblioteca2": {
+                "Comando": "pip install requests"
             }
         }
+    },
+    "Codigo": {
+        "Versao": "0.1"
     }
 }

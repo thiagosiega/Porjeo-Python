@@ -1,0 +1,14 @@
+Notas sobre as Atualizações:
+
+=>Função verificar_bibliotecas:
+    Corrigida para lidar corretamente com bibliotecas não instaladas e garantir que todas as bibliotecas listadas sejam verificadas e instaladas, se necessário.
+
+
+=>Tratamento de Exceções:
+    Adicionadas mensagens de erro mais específicas e melhor tratamento de exceções.
+
+=>Uso de subprocess.run:
+    subprocess.run agora é usado com o parâmetro check=True para garantir que exceções sejam lançadas se o comando falhar.
+
+=>Função verificar_versao_codigo:
+    Verifica a versão do código local comparando com a versão obtida do GitHub.
