@@ -125,7 +125,7 @@ def atualizar_codigo():
         for arquivo in excluir:
             subprocess.run(f"rm -rf {pasta}/{arquivo}", shell=True, check=True)
         FILE = "Porjeo-Python"
-        py = "main.py"
+        py = ["main.py", "Update.py"]
         #sobe todos os arquivos da pasta para a pasta raiz exeto a pasta main.py
         for i in os.listdir(FILE):
             if i != py:
