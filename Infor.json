@@ -1,6 +1,5 @@
 {
     "Dependencias": {
-        "Versao": "0.1",
         "Bibilhotecas": {
             "Biblioteca1": {
                 "Nome": "Pygame",
@@ -21,6 +20,6 @@
         }
     },
     "Codigo": {
-        "Versao": "0.1"
+        "Versao": "0.3"
     }
 }
