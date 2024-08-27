@@ -115,26 +115,20 @@ def verificar_versao_codigo():
         print(f"Erro no formato do arquivo JSON: Chave ausente {e}")
         return False
 
-def atualizar_codigo():
-    WEB = "https://github.com/thiagosiega/Porjeo-Python.git"
-    comando = f"git clone {WEB}"
-    pasta = "Porjeo-Python"
-    try:
-        subprocess.run(comando, shell=True, check=True)
-        excluir = ["Infor.json", "Janela"]
-        for arquivo in excluir:
-            subprocess.run(f"rm -rf {pasta}/{arquivo}", shell=True, check=True)
-        FILE = "Porjeo-Python"
-        py = ["main.py", "Update.py"]
-        #sobe todos os arquivos da pasta para a pasta raiz exeto a pasta main.py
-        for i in os.listdir(FILE):
-            if i != py:
-                shutil.move(f"{FILE}/{i}", i)
-        return True
-    except subprocess.CalledProcessError as e:
-        print(f"Erro ao atualizar o código: {e}")
-        return False
 
+def atualizar_codigo():
+    # URL do repositório Git
+    WEB = "https://github.com/thiagosiega/Projeto-Python.git"
+    #sobe uma pasta e salva 
+    os.chdir("..")
+    # Clonar o repositório
+    try:
+        subprocess.run(["git", "clone", WEB], check=True)
+        #chma o arquivo update.py
+        os.system("python Projeto-Python/Update.py")
+    except subprocess.CalledProcessError as e:
+        print(f"Erro ao clonar o repositório: {e}")
+        return False
 def main():
     janela = Janela(geometria="600x500", titulo="Verificador de Atualizações")
     Labeis = ["Python", "Bibliotecas", "Código"]
